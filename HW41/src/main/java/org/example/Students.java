@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "students")
@@ -17,4 +18,6 @@ public class Students {
     private Integer id;
     private String name;
     private Integer age;
+    @Column(name = "registration_date")
+    private LocalDateTime registrationDate;
 }
